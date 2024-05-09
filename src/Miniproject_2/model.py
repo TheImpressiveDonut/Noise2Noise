@@ -15,12 +15,12 @@ class Model:
         else:
             self.model = model
 
-    def save_pretrained_model(self, save_path="Proj_300849_302806_300585/Miniproject_2/bestmodel.pth"):
+    def save_pretrained_model(self, save_path="src/Miniproject_2/bestmodel.pth"):
         pickle_out = open(save_path,"wb")
         pickle.dump(self.model.parameters(), pickle_out)
         pickle_out.close()
 
-    def load_pretrained_model(self, save_path="Proj_300849_302806_300585/Miniproject_2/bestmodel.pth") -> None:
+    def load_pretrained_model(self, save_path="src/Miniproject_2/bestmodel.pth") -> None:
         pickle_in = open(save_path,"rb")
         model_parameters = pickle.load(pickle_in)
         for i in range(len(model_parameters)):

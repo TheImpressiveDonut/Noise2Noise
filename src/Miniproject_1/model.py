@@ -15,11 +15,11 @@ class Model:
         else:
             self.model = model.to(self.device)
 
-    def load_pretrained_model(self, filename="Proj_300849_302806_300585/Miniproject_1/bestmodel.pth") -> None:
+    def load_pretrained_model(self, filename="src/Miniproject_1/bestmodel.pth") -> None:
         checkpoint = torch.load(filename, map_location=self.device)
         self.model.load_state_dict(checkpoint['model_state_dict'])
 
-    def save_trained_model(self, filename="Proj_300849_302806_300585/Miniproject_1/bestmodel.pth") -> None:
+    def save_trained_model(self, filename="src/Miniproject_1/bestmodel.pth") -> None:
         torch.save({'model_state_dict': self.model.state_dict()}, filename)
 
     def predict(self, test_input) -> torch.Tensor:

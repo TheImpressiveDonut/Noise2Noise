@@ -1,4 +1,5 @@
-# DeepLearning
+# Noise2Noise and Autoencoders
+
 The goal of the first project is to implement an image
 denoising network trained without a clean reference image
 following the Noise2Noise (N2N) paper [1]. The data given
